@@ -47,19 +47,19 @@ function getWinner(playerMove,computerMove) {
     } else if (playerMove === 'rock') {
     	if (computerMove === 'paper') {
     		winner = 'computer';
-    	} else
+    	} else {
     		winner = 'player';
     	}
     } else if (playerMove === 'paper') {
     	if (computerMove === 'scissors') {
     		winner = 'computer';
-    	} else
+    	} else {
     		winner = 'player';
     	}
     } else if (playerMove === 'scissors') {
     	if (computerMove === 'rock') {
     		winner = 'computer';
-    	} else 
+    	} else {
     		winner = 'player';
     	}
     }
