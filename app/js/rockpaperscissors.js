@@ -41,25 +41,19 @@ function getWinner(playerMove,computerMove) {
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     if (playerMove === computerMove) {
-    	winner = 'tie';
-    } else if (playerMove === 'rock') {
-    	if (computerMove === 'paper') {
-    		winner = 'computer';
-    	} else {
+        winner === 'tie';
+    } else if (playerMove === 'rock' && computerMove === 'paper') {
+       		winner = 'computer';
+    } else if (playerMove === 'rock' && computerMove === 'scissors') {
     		winner = 'player';
-    	}
-    } else if (playerMove === 'paper') {
-    	if (computerMove === 'scissors') {
+    } else if (playerMove === 'paper' && computerMove === 'scissors') {
     		winner = 'computer';
-    	} else {
+    } else if (playerMove === 'paper' && computerMove === 'rock') {
     		winner = 'player';
-    	}
-    } else if (playerMove === 'scissors') {
-    	if (computerMove === 'rock') {
+    } else if (playerMove === 'scissors' && computerMove === 'rock') {
     		winner = 'computer';
-    	} else {
+    } else if (playerMove === 'scissors' && computerMove === 'paper') {
     		winner = 'player';
-    	}
     }
     
     return winner;
@@ -77,13 +71,13 @@ function playToFive() {
         var computerMove = getComputerMove();
     	var winner = getWinner(playerMove, computerMove);
 
-    	if (winner = 'player') {
+    	if (winner === 'player') {
     		playerWins ++;
-    	} else if (winner = 'computer') {
+    	} else if (winner === 'computer') {
     		computerWins ++;
     	} 
 
-        console.log("Player chose " + playerMove + " while Computer chose " + computerMove + " so " + winner + " wins.");
+        console.log("You chose " + playerMove + ", the Computer chose " + computerMove +".");
         
         console.log("The current score is " + "Player: " + playerWins + " to Computer: " + computerWins);
     }
